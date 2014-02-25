@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html>
+
+  <head>
+    <title>Hello World</title>
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+    <link rel="stylesheet" href="jquery.mobile-1.3.2.min.css" /> 
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.3.2.min.js"></script>
+	
+	  
+  </head>
+
+<body>
+  <div data-role="page" id="page_dashboard">
+<script type="text/javascript" charset="utf-8" src="scripts/dashboard.js"></script>
+
+ <div data-role="header">
+   <h1>Dashboard</h1>
+   <div id="user_name"></div>
+ </div><!-- /header -->
+
+ <div data-role="content">
+   <p><a href="#page_login" data-role="button" id="button_login">Login</a></p>
+   <p><a href="#" data-role="button" id="button_logout">Logout</a></p>
+   <a href="#page_node_create" data-role="button" id="button_page_create">Create Page</a></p>
+   <a href="#page_node_retrieve" data-role="button" id="button_node_retrieve">Node Retrieve</a></p>
+ </div><!-- /content -->
+<p>
+</div><!-- /page -->
+
+<div data-role="page" id="page_login">
+ <script type="text/javascript" charset="utf-8" src="scripts/login.js"></script>
+  <div data-role="header">
+	<p><a href="#page_dashboard" data-role="button" id="button_logout">Go Dashboard</a><h1>Login</h1></p>
+  </div><!-- /header -->
+
+  <div data-role="content" class='content'>
+    <div>
+      <label for="page_login_name">Username</label>
+      <input type="text" id="page_login_name" />
+    </div>
+    <div>
+      <label for="page_login_pass">Password</label>
+      <input type="password" id="page_login_pass" />
+    </div>
+    <fieldset>
+      <div><button type="button" data-theme="b" id="page_login_submit">Login</button></div>
+    </fieldset>
+  </div><!-- /content -->
+
+</div><!-- /page -->
+
+
+<div data-role="page" id="page_node_create">
+
+  <script type="text/javascript" charset="utf-8" src="scripts/node_create.js"></script>
+
+  <div data-role="header">
+  <p><a href="#page_dashboard" data-role="button" id="button_logout">Go Dashboard</a><h1>Create Page</h1></p>
+    
+  </div><!-- /header -->
+
+  <div data-role="content" class='content'>
+    <div>
+      <label for="page_node_name">Title</label>
+      <input type="text" id="page_node_title" />
+    </div>
+    <div>
+      <label for="page_node_body">Body</label>
+      <textarea id="page_node_body"></textarea>
+    </div>
+    <fieldset>
+      <div><button type="button" data-theme="b" id="page_node_create_submit">Submit</button></div>
+    </fieldset>
+  </div><!-- /content -->
+
+</div><!-- /page -->
+
+
+<div data-role="page" id="page_node_retrieve">
+
+  <script type="text/javascript" charset="utf-8" src="scripts/node_retrieve.js"></script>
+
+  <div data-role="header">
+	<p><a href="#page_dashboard" data-role="button" id="button_logout">Go Dashboard</a><h1>Node Retrieve</h1></p>
+  </div><!-- /header -->
+
+  <div data-role="content" class='content'>
+    <div> 
+		 <fieldset>
+		<div><button type="button" data-theme="b" id="get_node_retrieve">retrieve</button></div>
+		</fieldset>
+		<div id="node_content"> </div>
+	</div>
+  </div><!-- /content -->
+
+</div><!-- /page -->
+</body>
+
+</html>
